@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { Note } from "../../types/notes";
+import Note from "../../types/notes";
 
 let notes: Note[] = [];
 
@@ -13,6 +13,7 @@ export async function POST(req: NextRequest) {
   const newNote: Note = {
     id: notes.length + 1,
     text: body.text,
+    completed: false,  
   };
 
   notes.push(newNote);

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Notes App",
-  description: "Simple Notes App using Next.js + Tailwind + TypeScript",
+  title: "TO-DO List",
+  description: "Simple TO-DO List using Next.js + Tailwind + TypeScript",
 };
 
 export default function RootLayout({
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 text-gray-900">{children}</body>
+      <body className="bg-gray-100 text-gray-900">
+        <Navbar /> 
+        {children}
+        </body>
     </html>
   );
 }
